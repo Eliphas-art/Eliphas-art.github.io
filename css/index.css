@@ -1,5 +1,6 @@
 *{
     font-family: "Poppins", sans-serif;
+    text-decoration: none;
 }
 :root{
     --main-color: #b1976b;
@@ -9,10 +10,13 @@
     --main-color5: rgb(196, 196, 196);
     --main-color6: rgb(245,245,245);
     --main-color7: #222222;
+    --main-colorLite: rgba(44, 50, 88,0.95);
 }
 /*Global*/
-em,button{
+em,.button{
+    position: relative;
     text-transform: uppercase;
+    z-index: 3;
 }
 h1,h2,h3{
     font-family: "Playfair Display", serif;
@@ -57,8 +61,8 @@ em{
     margin-bottom: 10px;
     color: var(--main-color);
 }
-button{
-    display: block;
+.button{
+    display: inline-block;
     background: var(--main-color);
     font-size: 12px;
     border: none;
@@ -66,7 +70,7 @@ button{
     border-radius: 5px;
     color: rgb(var(--main-color3));
 }
-button i{
+.button i{
     margin-left: 10px;
 }
 .block{
@@ -174,6 +178,7 @@ margin-left: 292px;
     color: white;
 }
 #header em{
+    position: relative;
     font-size: 24px;
     text-transform: uppercase;
 }
@@ -238,13 +243,14 @@ margin-left: 292px;
 #personName:before{
     content: "";
     position: absolute;
-    bottom: -40px;
+    bottom: -80px;
     grid-column: span 2;
     display: block;
-    height: 500px;
+    height: 450px;
     width: 100%;
     background: linear-gradient(0deg, rgba(21,25,28,.8) 0%, rgba(21,25,28,.1) 100%);
-    filter: blur(40px);
+
+    filter: blur(60px);
     z-index: 0;
 }
 #personName .titleCard::after {
@@ -254,8 +260,8 @@ margin-left: 292px;
 
 #personName .element:nth-child(1){
     position: relative;
-    background: url("../res/page121.jpg");
-    background-size: cover;
+    background: url("../res/processed.jpeg");
+    background-size: 100% auto;
 }
 #personName .element:nth-child(2){
     position: relative;
@@ -270,12 +276,13 @@ margin-left: 292px;
     color: rgb(var(--main-color3));
 }
 #personName >.element:nth-child(3){
-    background: url("../res/Page123.jpg");
+    background: linear-gradient(var(--main-colorLite),var(--main-colorLite)), url("https://loyer.com.ua/wp-content/uploads/2017/08/newyorkshutter.jpg");
+
     grid-gap: 30px;
     background-size: cover;
 }
 #personName >.element:nth-child(4){
-    background: url("../res/page124.jpg");
+    background: url("../res/Page124.jpg");
     background-size: cover;
 }
 
@@ -368,7 +375,7 @@ grid-template-columns: repeat(3, 1fr);
     font-size: 18px;
     font-weight: 700;
 }
-#case button{
+#case .button{
     margin: 20px;
     grid-column: 2;
 }
@@ -513,7 +520,6 @@ footer .link{
 footer i{
     color: var(--main-color);
     margin-right: 10px;
-
 }
 .citeInfo{
     display: grid;
