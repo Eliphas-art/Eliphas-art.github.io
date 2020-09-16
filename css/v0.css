@@ -75,14 +75,11 @@ em{
     margin-left: 0.625em;
 }
 .block{
-    display: grid;
-    justify-items: center;
-    align-items: center;
     border: 1px solid var(--main-color5);
-    padding: 9.125em 0;
+    padding: 130px 300px;
 }
 .blockTwo{
-    padding: 60px 10vw;
+    padding: 60px 292px ;
 }
 .blockCard{
     display: grid;
@@ -98,16 +95,15 @@ em{
 .blockCard .element{
     display: grid;
     align-content: center;
-    height: 90vh;
-    padding: 1.875rem 115px 1.875rem 90px;
+    padding: 134px 115px 134px 90px;
 }
 .title{
     text-align: center;
-    margin: 0 0 2em;
+    margin: 50px 0;
 }
 .title h2::after{
     content: "";
-    margin: .45em auto 0;
+    margin: 20px auto 0;
     display: block;
     height: 30px;
     width: 1px;
@@ -115,7 +111,7 @@ em{
 }
 .titleCard em{
     display: block;
-    margin-top: 1.5em;
+    margin-top: 30px;
     font-family: Poppins, sans-serif;
     letter-spacing: 0;
     text-transform: none;
@@ -129,7 +125,7 @@ em{
     width: 50px;
     border-radius: 5px;
     background: var(--main-color);
-    margin: 2.6em 0;
+    margin: 35px 0;
 }
 .content{
     display: grid;
@@ -189,13 +185,29 @@ em{
     color: var(--main-color);
 }
 /*Person Name*/
+.blockCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    color: rgba(var(--main-color3),0.9);
+}
+.blockCard p{
+    line-height: 27px;
+    color: rgba(217, 209, 196,0.8);
+}
+.blockCard .element{
+    display: grid;
+    align-content: center;
+    padding: 134px 115px 134px 90px;
+}
 #personName:before{
     content: "";
     position: absolute;
     bottom: -80px;
     grid-column: span 2;
     display: block;
-    height: 50vh;
+    height: 450px;
     width: 100%;
     background: linear-gradient(0deg, rgba(21,25,28,.8) 0%, rgba(21,25,28,.1) 100%);
 
@@ -206,6 +218,7 @@ em{
     width: 60px;
     background: rgba(var(--main-color3),0.8);
 }
+
 #personName .element:nth-child(1){
     position: relative;
     background: url("../res/processed.jpeg");
@@ -217,32 +230,33 @@ em{
     background-size: cover;
 }
 #personName .element:nth-child(2) h2{
-    margin: 0.27em 0 .4em;
-    font-size: 4.625rem;
+    margin: 20px 0 30px;
+    font-size: 4.625em;
     font-weight: 700;
     text-transform: capitalize;
     color: rgb(var(--main-color3));
 }
 #personName >.element:nth-child(3){
     background: linear-gradient(var(--main-colorLite),var(--main-colorLite)), url("https://loyer.com.ua/wp-content/uploads/2017/08/newyorkshutter.jpg");
-    grid-gap: 1.87em;
+    grid-gap: 30px;
     background-size: cover;
 }
 #personName >.element:nth-child(4){
     background: url("../res/Page124.jpg");
     background-size: cover;
 }
+
 #personName .card {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-gap: .6em;
+    grid-gap: 10px;
 }
 #personName .card .text{
-    margin: 0 1.25em;
+    margin: 0 20px;
 }
 #personName .card p{
     line-height: 1.7;
-    margin: 1.76em 0 0;
+    margin: 30px 0 0;
 }
 
 #personName .painting{
@@ -256,27 +270,24 @@ em{
 }
 /*About*/
 #about{
-    padding: 3.125em;
+    padding: 50px;
     background: url("../res/layer-bg1.jpg");
     background-size: cover;
 }
 #about h2{
     margin-top: 20px;
 }
-
 #about .content{
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2.6rem;
+    grid-gap: 40px;
 }
 #about .content p{
-    width: 27em;
     line-height: 29px;
     color: var(--main-color5);
 }
 #about .interval{
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 4.2rem;
     text-align: center;
     justify-items: center;
 }
@@ -334,7 +345,7 @@ em{
 
 }
 #case .content{
-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     grid-gap: 20px;
 }
@@ -365,10 +376,10 @@ grid-template-columns: repeat(3, 1fr);
 }
 /* Comment*/
 #comment{
-    padding: 3.125em;
+    padding: 50px;
     text-align: center;
     background: url("../res/walk-way-1.jpg");
-   margin: auto;
+    margin: auto;
     justify-items: center;
 }
 #comment h3{
@@ -442,12 +453,12 @@ grid-template-columns: repeat(3, 1fr);
     line-height: 31px;
     color: var(--main-color2);
 }#connect p{
-    line-height: 27px;
-    color: var(--main-color2);
+     line-height: 27px;
+     color: var(--main-color2);
  }
 #connect h2{
     color: var(--main-color7);
- }
+}
 
 #connect .contact{
     background: var(--main-color6);
