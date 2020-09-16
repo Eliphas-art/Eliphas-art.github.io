@@ -201,6 +201,10 @@ em{
     filter: blur(60px);
     z-index: 0;
 }
+#personName .element{
+    padding-top: 0;
+    padding-bottom: 0;
+}
 #personName .titleCard::after {
     width: 60px;
     background: rgba(var(--main-color3),0.8);
@@ -394,7 +398,6 @@ grid-template-columns: repeat(3, 1fr);
     line-height: 34px;
 }
 #comment .contact{
-
     display: grid;
     grid-gap: 20px;
     grid-auto-flow: column;
@@ -412,8 +415,10 @@ grid-template-columns: repeat(3, 1fr);
 }
 #connect .element{
     align-content: start;
-    /*padding-top: 5em;*/
+    padding-top: 6em;
+    padding-bottom: 9em;
     grid-gap: 20px;
+    height: auto;
 }
 #connect i{
     color: var(--main-color);
@@ -421,7 +426,7 @@ grid-template-columns: repeat(3, 1fr);
 }
 #connect input{
     border: none;
-    padding: 16px 20px 20px;
+    padding: 1em .8em;
 }
 #connect .email{
     width: 346px;
