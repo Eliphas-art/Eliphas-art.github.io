@@ -229,7 +229,7 @@ em{
     background-size: cover;
 }
 #personName >.element:nth-child(4){
-    background: url("../res/Page124.jpg");
+    background: url("../res/page124.jpg");
     background-size: cover;
 }
 #personName .card {
