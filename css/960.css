@@ -1,0 +1,14 @@
+@media only screen and (max-width : 940px) {
+    html{
+        font-size: 7px;
+    }
+    #header{
+        padding: 0 10vw;
+    }
+    #personName .element{
+
+    }
+    .block{
+        padding: 6em 0;
+    }
+}
