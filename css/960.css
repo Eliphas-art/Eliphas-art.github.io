@@ -1,6 +1,6 @@
-@media only screen and (max-width : 1000px) {
+@media only screen and (max-width : 1366px) {
     html{
-        font-size: 7px;
+        font-size: 10px;
     }
     #header{
         padding: 0 10vw;
