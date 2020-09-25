@@ -3,12 +3,18 @@
         font-size: 12px;
     }
     #header{
-        padding: 0 10vw;
+        padding: 1em 10vw;
     }
-    #personName .element{
-
+    #header .menu{
+        font-size: 1.3rem;
+    }
+    #header .button{
+        font-size: 12px;
     }
     .block{
         padding: 6em 0;
+    }
+    #connect input{
+
     }
 }
