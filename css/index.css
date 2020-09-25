@@ -206,6 +206,7 @@ em{
 }
 /*Person Name*/
 #personName .fonts{
+    margin: 1em 0;
     font-size: 3rem;
     font-family: 'Allura', cursive;
     color: var(--main-color);

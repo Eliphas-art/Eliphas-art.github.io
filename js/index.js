@@ -18,3 +18,89 @@
 // returnObj = JSON.parse(localStorage.getItem("myKey"));
 // console.log(returnObj);
 //
+const caseCardDB=[{
+    img: "res/Family1-800x571.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/header_slider_01.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/Reinventing-the-Riverfront-800x571.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/layer-bg1.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/Giving-Million-Air-Its-Wings-800x571.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/Family1-800x571.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/layer-bg1.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/Giving-Million-Air-Its-Wings-800x571.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+},{
+    img: "res/Family1-800x571.jpg",
+    h3: "Family Violence",
+    // p: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce."
+}];
+const caseCardCollect=[];
+const cases = document.querySelector("#case");
+const casesContent = cases.querySelector(".content");
+const caseCard = document.createElement("div");
+const imgBlock= document.createElement('div');
+const img = document.createElement('img');
+const h3 = document.createElement("h3");
+let caseCount = 3;
+caseCard.classList = "card";
+imgBlock.classList = "img";
+for (let i = 0; i<caseCardDB.length;i++) {
+    caseCardCollect[i] = copyTagCard(caseCard, caseCardDB[i]);
+}
+
+function casesF () {
+
+    casesContent.innerHTML = "<a href=\"#case\" onclick=\"casesF()\" class=\"button\">View all cases <i class=\"fas fa-long-arrow-alt-right\"></i></a>\n";
+    // this.style.display = "none";
+    let numb;
+    if (caseCount===3){
+        caseCount= caseCardDB.length;
+    }
+    else {
+        caseCount= 3;
+    }
+    for (let i = 0; i<caseCount;i++){
+        // console.log(caseCardCollect);
+        casesContent.prepend(caseCardCollect[i])
+    }
+};
+
+
+function copyTagCard(tag, inner, appernd) {
+    const tags = tag.cloneNode(true);
+    if (typeof inner ==="object"){
+        let x = copyTagCard(imgBlock, false, tags);
+
+        copyTagCard(img, inner.img, x);
+        copyTagCard(h3, inner.h3, tags);
+    }
+    else if (inner !== false) {
+        tags.src = inner;
+        tags.innerHTML = inner;
+    }
+    if (appernd)
+        appernd.append(tags);
+
+    return tags
+}
