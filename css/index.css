@@ -268,16 +268,13 @@ i:hover{
 }
 /*About*/
 #about{
-
     padding: 3.125em;
-    background: linear-gradient(rgba(235,235,235,.8) 100%, white) , url("../res/work-bg.jpg") fixed;
-
+    background: url("../res/layer-bg1.jpg");
     background-size: cover;
 
 }
 #about h2{
     margin-top: 20px;
-    color: black;
 }
 
 #about .content{
@@ -290,7 +287,7 @@ i:hover{
     padding: 0;
     width: 70vw;
     line-height: 29px;
-    color: rgba(0,0,0,.8);
+    color: var(--main-color5);
 }
 #about .content li{
     margin-left: 2em;
