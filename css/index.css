@@ -1,5 +1,5 @@
 *{
-    transition: 1s;
+    /*transition: 1s;*/
     font-family: "Poppins", sans-serif;
     text-decoration: none;
 }
@@ -348,7 +348,7 @@ i:hover{
 
 }
 #case .content{
-grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     grid-gap: 20px;
 }

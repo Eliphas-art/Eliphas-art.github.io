@@ -72,11 +72,11 @@ for (let i = 0; i<caseCardDB.length;i++) {
 let caseCount = caseCardCollect.length;
 function casesF() {
     arrow = !arrow;
-    casesContent.innerHTML = `<a href="#case" onclick="casesF()" class="button">View all cases <i class="fas fa-long-arrow-alt-${arrow?"right":"left"}"></i></a>`;
-    if (caseCount === 3) {
+    casesContent.innerHTML = `<button onclick="casesF()" class="button">View all cases <i class="fas fa-long-arrow-alt-${arrow?"right":"left"}"></i></button>`;
+    if (caseCount === 3|| caseCount === 1) {
         caseCount = caseCardDB.length;
     } else {
-        caseCount = 3;
+        caseCount = window.innerWidth <= 360 ? 1 : 3;
     }
     for (let i = 0; i<caseCardDB.length;i++) {
         cardsRand[i]=i

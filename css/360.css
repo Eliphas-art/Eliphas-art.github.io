@@ -1,0 +1,83 @@
+@media only screen and (max-width : 640px) {
+    html {
+        font-size: 11px;
+    }
+    .menu-right{
+        display: none;
+    }
+    #header .menu{
+        display: none;
+    }
+    #header .content{
+        text-align: center;
+    }
+    .blockCard{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .blockCard .element:nth-child(3n+1){
+        display: none;
+    }
+    #personName .element .card:nth-child(1n+3){
+        display: none;/*Карусель*/
+    }
+    #about, #comment{
+        text-align: center;
+        padding: 1em;
+    }
+    #about p, #comment p{
+        width: auto;
+    }
+    #about .content{
+        grid-template-columns: 1fr;
+    }
+    #about .content p:nth-child(2){
+        display: none;/*Карусель*/
+    }
+    #about .interval{
+        display: none;
+    }
+    #connect{
+        grid-template-columns: 1fr;
+    }
+    #connect .element:nth-child(1){
+
+        display: none;/*Карусель*/
+    }
+    #case .content{
+        grid-template-columns: 1fr;
+    }
+
+    #case .button{
+        grid-column: 1;
+    }
+    #footer .partner a:nth-child(1n+3){
+        display: none;/*Карусель*/
+    }
+}
+
+@media only screen and (max-width : 360px) {
+    .blockCard .element{
+        min-height: 80vh;
+        padding: 3em;
+    }
+    #case .card{
+        width: 90vw;
+    }
+    #connect .consultation form{
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+    }
+    #connect .consultation *{
+        grid-column: 1;
+    }
+    #connect .element{
+        padding: 3em;
+    }
+    #footer .partner a:nth-child(1n+2){
+        display: none;/*Карусель*/
+    }
+    #footer .content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
