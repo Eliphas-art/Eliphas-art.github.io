@@ -1,5 +1,5 @@
 *{
-
+    transition: 1s;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
 }
@@ -551,6 +551,7 @@ footer i{
     margin: 0;
 }
 .menu-right{
+
     position: fixed;
     padding: 1em;
     border-radius: 2em 0 0 2em;
@@ -567,6 +568,7 @@ footer i{
     margin: 1em 0;
 }
 .menu-right > li:hover{
+    transition-duration: 2ms;
     margin-right: 0.5em;
     font-size: 1.2em;
 }
@@ -588,10 +590,8 @@ footer i{
     from {
         opacity: 0.4;
         filter: drop-shadow(0 0 .3em)
-
     }
     to{
         opacity: 1;
     }
-
 }
