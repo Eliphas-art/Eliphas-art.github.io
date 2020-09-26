@@ -445,7 +445,7 @@ grid-template-columns: repeat(3, 1fr);
     display: grid;
     align-items: center;
     justify-items: start;
-    grid-template-columns: auto 1fr 3fr;
+    grid-template-columns: auto 1fr 4fr;
 }
 #connect i{
     color: var(--main-color);
@@ -570,7 +570,11 @@ footer i{
     margin-right: 0.5em;
     font-size: 1.2em;
 }
-.tellPhone i{
+.tellPhone i {
+    animation: tellPhones;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate-reverse;
     position: fixed;
     bottom: 2em;
     right: 2em;
@@ -579,4 +583,15 @@ footer i{
     border-radius: 50%;
     background: var(--main-color);
     color: white;
+}
+@keyframes tellPhones {
+    from {
+        opacity: 0.4;
+        filter: drop-shadow(0 0 .3em)
+
+    }
+    to{
+        opacity: 1;
+    }
+
 }
