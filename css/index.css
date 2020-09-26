@@ -268,7 +268,7 @@ i:hover{
 }
 /*About*/
 #about{
-    padding: 3.125em;
+    padding: 2.2em;
     background: url("../res/layer-bg1.jpg");
     background-size: cover;
 
@@ -291,7 +291,7 @@ i:hover{
     margin: 0;
     padding: 0;
     width: 70vw;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6em;
     color: var(--main-color5);
 }
