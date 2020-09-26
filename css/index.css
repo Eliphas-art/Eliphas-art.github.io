@@ -268,22 +268,33 @@ i:hover{
 }
 /*About*/
 #about{
+
     padding: 3.125em;
-    background: url("../res/layer-bg1.jpg");
+    background: linear-gradient(rgba(235,235,235,.8) 100%, white) , url("../res/work-bg.jpg") fixed;
+
     background-size: cover;
+
 }
 #about h2{
     margin-top: 20px;
+    color: black;
 }
 
 #about .content{
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2.6rem;
+    grid-gap: 1rem;
 }
-#about .content p{
-    width: 27em;
+#about .content p ,#about .content ul{
+    text-indent: 2em;
+    margin: 0;
+    padding: 0;
+    width: 70vw;
     line-height: 29px;
-    color: var(--main-color5);
+    color: rgba(0,0,0,.8);
+}
+#about .content li{
+    margin-left: 2em;
+    list-style: square;
 }
 #about .interval{
     display: grid;
