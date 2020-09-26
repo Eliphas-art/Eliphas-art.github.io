@@ -1,1 +1,1 @@
-alert(window.innerWidth)
+alert(window.innerWidth+ " " +window.innerHeight)
