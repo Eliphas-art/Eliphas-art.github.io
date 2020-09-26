@@ -18,17 +18,23 @@
 <ul class="menu-right">
     <li><a href="#header">Главная</a></li>
     <li><a href="#personName">Об адвокате</a></li>
-    <li><a href="#about">Услуги</a></li>
-    <li><a href="#biography">Услуги</a></li>
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#biography">Биография</a></li>
+    <li><a href="#info">Информация</a></li>
+    <li><a href="#case">Блог</a></li>
     <li><a href="#comment">Отзывы</a></li>
     <li><a href="#connect">Контакты</a></li>
+    <li><a href="#footer">Подвал</a></li>
 </ul>
+
 <header id="header">
     <nav>
         <h1><span>AB</span> Alla Bogach</h1>
         <ul class="menu" >
             <li><a href="#header">Главная</a></li>
             <li><a href="#personName">Об адвокате</a></li>
+            <li><a href="#about">Услуги</a></li>
             <li><a href="#biography">Услуги</a></li>
             <li><a href="#comment">Отзывы</a></li>
             <li><a href="#connect">Контакты</a></li>
@@ -55,32 +61,47 @@
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
             <i class="fab fa-twitter"></i>
-            <i class="far fa-address-book"></i>
         </div>
     </div>
-    <div class="element">
+    <div class="element" id="services">
         <div class="titleCard">
             <h2>Услуги</h2>
         </div>
         <div class="card">
             <img src="res/insurance5.png" alt="">
             <div class="text">
-                <h3>Гражданское право & цивильного права</h3>
-                <p> Отрасль права, объединяющая правовые нормы, регулирующие имущественные, а также связанные и несвязанные с ними личные неимущественные отношения</p>
+                <h3>Семейные споры</h3>
+                <ul>
+                    <li>Расторжение брака </li>
+                    <li>Взыскание алиментов</li>
+                    <li>Раздел имущества при разводе </li>
+                    <li>Установление места жительства ребенка</li>
+                    <li>Лишение родительских прав</li>
+                    <li>Установление факта отцовства, либо опровержение его</li>
+                </ul>
             </div>
         </div>
         <div class="card">
             <img src="res/insurance5.png" alt="">
             <div class="text">
-                <h3>Административное право</h3>
-                <p>Это отрасль права, регулирующая общественные отношения в сфере управленческой деятельности государственных </p>
+                <h3>Гражданское право</h3>
+                <ul>
+                    <li>Наследственное право</li>
+                    <li>Споры в сфере недвижимости</li>
+                    <li>О признании лица утратившим право пользования жилым помещением</li>
+                </ul>
             </div>
         </div>
         <div class="card">
             <img src="res/insurance5.png" alt="">
             <div class="text">
                 <h3>Семейное право</h3>
-                <p>Астерс предоставляет полный спектр услуг в сфере семейного права украинским и иностранным клиентам, включая юридическое консультирование, составление договоров, регулирующих семейные и наследственные отношения</p>
+                <ul>
+                    <li>Детальный анализ проблемной ситуации клиента</li>
+                    <li>Досудебного урегулирования споров</li>
+                    <li>Составление и подача исковых заявлений, апелляционных и кассационных жалоб, ходатайств, отзывов на исковые заявления, и других процессуальных документов</li>
+                    <li>Юридическое сопровождение выполнения решений суда</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -128,7 +149,7 @@
         <p>John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce. He is also the Committee Head of the Permanent Scientific Committee of IFA. During 2011 John served as the Co-Chair of the Tax Committee of the American Chamber of Commerce and was the member of the working group on VAT reform at the Ministry of Finance of United Kingdom.</p>
     </div>
 <!--    Основная информация о компании  -->
-    <div class="element">
+    <div class="element" id="info">
         <div class="titleCard">
             <h2>Education & Bar Admission</h2>
         </div>
@@ -217,16 +238,17 @@
             <li><i class="fas fa-mobile-alt"></i>Lifecell:<span > +(380)063–212–50–84</span></li>
         </ul>
         <ul>
-            <li><i class="far fa-envelope"></i>eliphas.sn@gmail.com</li>
+            <li><i class="far fa-envelope"></i>advocat.bogachalla@gmail.com</li>
+
             <li><i class="far fa-clock"></i><span>ПН-СБ:</span>09:00 – 18:00</li>
             <li><i class="far fa-clock"></i><span>ВС: </span> Выходной</li>
             <li><i class="fas fa-map-marked-alt"></i>г. Запорожье </li>
         </ul>
         <p>Далеко-далеко, за словесными горами, вдали от стран Вокалии и Консонантии живут слепые тексты. Разлучили они.</p>
-        <form action="" onsubmit="return false">
-            <input class="email" type="text" placeholder="Your email">
-            <input type="button" value="Отправить">
-        </form>
+<!--        <form action="" onsubmit="return false">-->
+<!--            <input class="email" type="text" placeholder="Your email">-->
+<!--            <input type="button" value="Отправить">-->
+<!--        </form>-->
     </div>
     <div class="consultation element">
         <div class="titleCard">
@@ -236,8 +258,8 @@
         <form action="" onsubmit="return false">
             <input type="text" placeholder="Имя">
             <input type="text" placeholder="Телефон">
-            <input type="text" placeholder="Компания">
-            <input type="text" placeholder="E-mail">
+<!--            <input type="text" placeholder="Компания">-->
+<!--            <input type="text" placeholder="E-mail">-->
             <textarea placeholder="Введите сообщение..." cols="40" rows="10"></textarea>
             <input type="button" value="Консультация">
         </form>
@@ -259,7 +281,6 @@
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-instagram"></i>
                 <i class="fab fa-twitter"></i>
-                <i class="far fa-address-book"></i>
             </div>
         </div>
         <div class="contact">
@@ -297,5 +318,6 @@
     <p>Follow us</p>
 </div>
 <script src="js/index.js"></script>
+<script src="js/case.js"></script>
 </body>
 </html>
