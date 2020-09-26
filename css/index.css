@@ -10,7 +10,7 @@
     --main-color4: rgb(217, 209, 196);
     --main-color5: rgb(196, 196, 196);
     --main-color6: rgb(245,245,245);
-    --main-color7: #222222;
+    --main-color7: rgb(34, 34, 34);
     --main-colorLite: rgba(114, 59, 49,0.95);
 }
 /*Global*/
@@ -222,7 +222,7 @@ i:hover{
 #personName .element:nth-child(1){
     position: relative;
     background: url("../res/processed.jpeg");
-    background-size: 100% auto;
+    background-size: cover;
 }
 #personName .element:nth-child(2){
     position: relative;
@@ -265,6 +265,10 @@ i:hover{
 }
 #personName i{
     margin: 0.5em;
+}
+#personName p{
+    font-size: 1.05rem;
+    line-height: 1.3em;
 }
 /*About*/
 #about{
@@ -322,16 +326,19 @@ i:hover{
     grid-template-rows: 1fr 1fr;
 }
 #biography .element:nth-child(1){
-    background: url("../res/hp3-half-bg.jpg");
+    background: url("../res/alla2.jpg");
     background-size: cover;
 }
 #biography .element:nth-child(2){
-    background: var(--main-color7);
+    background: linear-gradient(rgba(34, 34, 34,0.97) 100%, white), url("../res/alla1.jpg");
+
+    /*background: var(--main-color7);*/
     background-size: cover;
 }
 #biography .element:nth-child(3){
     grid-gap: 30px;
-    background: var(--main-color7);
+    background: linear-gradient(rgba(34, 34, 34,0.97) 100%, white), url("../res/alla4.jpg");
+
     background-size: cover;
 }
 #biography .element:nth-child(4){
