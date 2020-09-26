@@ -13,26 +13,6 @@
     --main-color7: #222222;
     --main-colorLite: rgba(114, 59, 49,0.95);
 }
-.menu-right{
-    position: fixed;
-    padding: 1em;
-    border-radius: 2em 0 0 2em;
-    width: 8%;
-    right: 20px;
-    top: 50%;
-    z-index: 3
-}
-.menu-right:hover{
-    background: rgba(0,0,0,0.3);
-}
-.menu-right > *{
-    text-align: right;
-    margin: 1em 0;
-}
-.menu-right > li:hover{
-    margin-right: 0.5em;
-    font-size: 1.2em;
-}
 /*Global*/
 em,.button{
     position: relative;
@@ -85,6 +65,7 @@ em{
     color: var(--main-color);
 }
 i{
+    transition-duration: .5s;
     font-size: 1.3em;
 }
 i:hover{
@@ -241,7 +222,6 @@ i:hover{
 #personName .element:nth-child(1){
     position: relative;
     background: url("../res/processed.jpeg");
-    /*background: url("../res/girl.jpg");*/
     background-size: 100% auto;
 }
 #personName .element:nth-child(2){
@@ -323,7 +303,6 @@ i:hover{
     margin-top: 25px;
     color: var(--main-color);
 }
-
 /*Biography*/
 #biography .blockCard{
     grid-template-rows: 1fr 1fr;
@@ -345,15 +324,6 @@ i:hover{
     background: url("../res/page126.jpg");
     background-size: cover;
 }
-/*#biography .element:nth-child(1){*/
-/*    grid-gap: 30px;*/
-/*    background: var(--main-color7);*/
-/*    background-size: cover;*/
-/*}*/
-/*#biography .element:nth-child(2){*/
-/*    background: url("../res/page126.jpg");*/
-/*    background-size: cover;*/
-/*}*/
 #biography .titleCard em{
     line-height: 34px;
 }
@@ -406,6 +376,9 @@ grid-template-columns: repeat(3, 1fr);
 #case .button{
     margin: 20px;
     grid-column: 2;
+}
+#case .button i{
+    margin-left: .3em;
 }
 /* Comment*/
 #comment{
@@ -468,7 +441,7 @@ grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     min-height: auto;
 }
-li{
+#connect li{
     display: grid;
     align-items: center;
     justify-items: start;
@@ -576,4 +549,34 @@ footer i{
 }
 .citeInfo p{
     margin: 0;
+}
+.menu-right{
+    position: fixed;
+    padding: 1em;
+    border-radius: 2em 0 0 2em;
+    width: 8%;
+    right: 20px;
+    top: 35%;
+    z-index: 3
+}
+.menu-right:hover{
+    background: rgba(0,0,0,0.3);
+}
+.menu-right > *{
+    text-align: right;
+    margin: 1em 0;
+}
+.menu-right > li:hover{
+    margin-right: 0.5em;
+    font-size: 1.2em;
+}
+.tellPhone i{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    padding: 1em;
+    font-size: 2rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: white;
 }

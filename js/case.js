@@ -63,6 +63,7 @@ const imgBlock= document.createElement('div');
 const img = document.createElement('img');
 const h3 = document.createElement("h3");
 const cardsRand = [];
+let arrow = false;
 caseCard.classList = "card";
 imgBlock.classList = "img";
 for (let i = 0; i<caseCardDB.length;i++) {
@@ -70,7 +71,8 @@ for (let i = 0; i<caseCardDB.length;i++) {
 }
 let caseCount = caseCardCollect.length;
 function casesF() {
-    casesContent.innerHTML = "<a href=\"#case\" onclick=\"casesF()\" class=\"button\">View all cases <i class=\"fas fa-long-arrow-alt-right\"></i></a>\n";
+    arrow = !arrow;
+    casesContent.innerHTML = `<a href="#case" onclick="casesF()" class="button">View all cases <i class="fas fa-long-arrow-alt-${arrow?"right":"left"}"></i></a>`;
     if (caseCount === 3) {
         caseCount = caseCardDB.length;
     } else {
