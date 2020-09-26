@@ -272,11 +272,16 @@ i:hover{
     background: url("../res/layer-bg1.jpg");
     background-size: cover;
 
-}
+}#about .block{
+     padding: 6.125em 0;
+     }
 #about h2{
     margin-top: 20px;
+    margin-bottom: 20px;
 }
-
+#about h2::after{
+    display: none;
+}
 #about .content{
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
@@ -286,7 +291,8 @@ i:hover{
     margin: 0;
     padding: 0;
     width: 70vw;
-    line-height: 29px;
+    font-size: 1.1rem;
+    line-height: 1.6em;
     color: var(--main-color5);
 }
 #about .content li{
