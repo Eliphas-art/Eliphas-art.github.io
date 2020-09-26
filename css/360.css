@@ -1,4 +1,4 @@
-@media only screen and (max-width : 700px) {
+@media only screen and (max-width : 717px) {
     html {
         font-size: 11px;
     }
@@ -56,7 +56,7 @@
     }
 }
 
-@media only screen and (max-width : 400px) {
+@media only screen and (max-width : 414px) {
     .blockCard .element{
         min-height: 80vh;
         padding: 3em;
