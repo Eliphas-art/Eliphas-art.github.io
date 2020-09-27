@@ -76,7 +76,7 @@ function casesF() {
     if (caseCount === 3|| caseCount === 1) {
         caseCount = caseCardDB.length;
     } else {
-        caseCount = window.innerWidth <= 400 ? 1 : 3;
+        caseCount = window.innerWidth <= 1215&& window.innerWidth>413 ? 2 : window.innerWidth <= 413 ? 1 : 3;
     }
     for (let i = 0; i<caseCardDB.length;i++) {
         cardsRand[i]=i

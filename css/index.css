@@ -592,27 +592,41 @@ footer i{
     align-items: center;
     min-width: 80vw;
     position: fixed;
-    padding: 1em 10vw;
-    background: rgba(0,0,0,0.7);
+    padding: .2em 10vw;
+    background: rgba(0,0,0,0.9);
+
     top: 0;
     z-index: 3
 }
 .menu-right *{
     margin-top: 0;
 }
+.menu-right h1{
+    font-size: 1rem;
+}
 .menu-right li{
 display: inline-block;
+    font-size: 1rem;
     margin-left: 1em;
 }
 .menu-right > *{
     display: inline-block;
     margin: 1em 0;
 }
-.menu-right > li:hover{
-    transition-duration: 2ms;
-    margin-right: 0.5em;
-    font-size: 1.2em;
+.menu-right li::after {
+    content: "";
+    transition-duration: 155ms;
+    position: relative;
+    top: 1em;
+
+    display: block;
+    height: 1px;
+    width: 0;
+    background: var(--main-color);
 }
+.menu-right li:hover::after{
+    width: 100%;
+ }
 .tellPhone i {
     animation: tellPhones;
     animation-duration: 3s;
