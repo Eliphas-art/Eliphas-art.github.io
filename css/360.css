@@ -15,13 +15,14 @@
         text-align: center;
     }
     .blockCard{
-        grid-template-columns: 1fr;
+
         grid-template-rows: 1fr 1fr;
     }
 
-    #personName .element .card:nth-child(1n+3),#personName .element:nth-child(3n+1){
+    #personName .element .card:nth-child(1n+3),#personName .element:nth-child(4){
         display: none;/*Карусель*/
     }
+
     #personName .element:nth-child(2){
         background: linear-gradient(rgba(0,0,0,0.8) 100%, white), url("../res/alla5.jpg");
         background-size: cover;
@@ -45,13 +46,9 @@
     #about .interval{
         display: none;
     }
-    #connect{
+    #case .content, #connect, .blockCard{
         grid-template-columns: 1fr;
     }
-    #case .content{
-        grid-template-columns: 1fr;
-    }
-
     #case .button{
         grid-column: 1;
     }
@@ -61,9 +58,7 @@
     #footer .partner a:nth-child(1n+3){
         display: none;/*Карусель*/
     }
-
 }
-
 @media only screen and (max-width : 414px) {
     .blockCard .element{
         min-height: 80vh;

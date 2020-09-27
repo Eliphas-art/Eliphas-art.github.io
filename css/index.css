@@ -278,7 +278,7 @@ i:hover{
 
 }#about .block{
      padding: 6.125em 0;
-     }
+ }
 #about h2{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -406,7 +406,7 @@ i:hover{
     padding: 3.125em;
     text-align: center;
     background: url("../res/walk-way-1.jpg");
-   margin: auto;
+    margin: auto;
     justify-items: center;
 }
 #comment h3{
@@ -496,12 +496,12 @@ i:hover{
     line-height: 31px;
     color: var(--main-color2);
 }#connect p{
-    line-height: 27px;
-    color: var(--main-color2);
+     line-height: 27px;
+     color: var(--main-color2);
  }
 #connect h2{
     color: var(--main-color7);
- }
+}
 
 #connect .contact{
     background: var(--main-color6);
