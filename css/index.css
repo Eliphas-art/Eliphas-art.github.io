@@ -535,6 +535,7 @@ footer{
     background: var(--main-color7);
 }
 footer .partner{
+
     display: grid;
     align-items: center;
     justify-items: center;
@@ -586,19 +587,20 @@ footer i{
     margin: 0;
 }
 .menu-right{
-
+    display: grid;
+    grid-template-columns: 1fr auto;
     position: fixed;
     padding: 1em;
-    border-radius: 2em 0 0 2em;
-    width: 8%;
-    right: 20px;
-    top: 35%;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
     z-index: 3
 }
 .menu-right:hover{
-    background: rgba(0,0,0,0.3);
+
 }
 .menu-right > *{
+    display: inline-block;
     text-align: right;
     margin: 1em 0;
 }
