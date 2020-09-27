@@ -589,19 +589,23 @@ footer i{
 .menu-right{
     display: grid;
     grid-template-columns: 1fr auto;
+    align-items: center;
+    min-width: 80vw;
     position: fixed;
-    padding: 1em;
-    width: 100%;
+    padding: 1em 10vw;
     background: rgba(0,0,0,0.7);
     top: 0;
     z-index: 3
 }
-.menu-right:hover{
-
+.menu-right *{
+    margin-top: 0;
+}
+.menu-right li{
+display: inline-block;
+    margin-left: 1em;
 }
 .menu-right > *{
     display: inline-block;
-    text-align: right;
     margin: 1em 0;
 }
 .menu-right > li:hover{
