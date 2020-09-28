@@ -331,14 +331,14 @@ i:hover{
     background-size: cover;
 }
 #biography .element:nth-child(2){
-    background: linear-gradient(rgba(34, 34, 34,0.93) 100%, white), url("../res/alla1.jpg");
+    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/alla1.jpg");
 
     /*background: var(--main-color7);*/
     background-size: cover;
 }
 #biography .element:nth-child(3){
     grid-gap: 30px;
-    background: linear-gradient(rgba(34, 34, 34,0.93) 100%, white), url("../res/alla4.jpg");
+    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/alla4.jpg");
 
     background-size: cover;
 }

@@ -36,17 +36,13 @@
     #personName .element .card:nth-child(1n+3),#personName .element:nth-child(4){
         display: none;/*Карусель*/
     }
-
     #personName .element:nth-child(2){
         background: linear-gradient(rgba(0,0,0,0.8) 100%, white), url("../res/processed.jpeg");
         background-size: cover;
     }
-
     #about, #comment{
-
         padding: 1em;
     }
-
     #about p, #comment p{
         width: auto;
     }
@@ -75,7 +71,7 @@
         background-size: cover;
     }
     #biography .element:nth-child(2){
-        background: linear-gradient(rgba(0,0,0,.9) 100%,white), url("../res/alla5.jpg");
+        background: linear-gradient(rgba(0,0,0,.8) 100%,white), url("../res/alla5.jpg");
         background-size: cover;
     }
 }
