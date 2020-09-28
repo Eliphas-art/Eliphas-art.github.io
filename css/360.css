@@ -2,8 +2,24 @@
     html {
         font-size: 11px;
     }
-    #personName .element:nth-child(1){
+    .menu-right .burgerMenu{
+        display: block;
+    }
+    .menu-right ul{
+        display: none;
+        grid-template-rows: repeat(8,1fr);
+        align-items: center;
+        justify-items: center;
+        margin: 0;
+    }
 
+    .menu-right li{
+        font-size: 2em;
+        margin: 0;
+    }
+    #header{
+        background: linear-gradient(rgba(0, 0, 0,.9)100%, white), url("https://sud.ua/uploads/old/news/1402494373.jpg") center;
+        background-size: cover;
     }
     .menu-right{
         display: none;
@@ -15,21 +31,19 @@
         text-align: center;
     }
     .blockCard{
-
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr auto;
     }
-
     #personName .element .card:nth-child(1n+3),#personName .element:nth-child(4){
         display: none;/*Карусель*/
     }
 
     #personName .element:nth-child(2){
-        background: linear-gradient(rgba(0,0,0,0.8) 100%, white), url("../res/alla5.jpg");
+        background: linear-gradient(rgba(0,0,0,0.8) 100%, white), url("../res/processed.jpeg");
         background-size: cover;
     }
 
     #about, #comment{
-        text-align: center;
+
         padding: 1em;
     }
 
@@ -55,13 +69,16 @@
     #connect .element:nth-child(1) li{
         grid-template-columns: auto 1fr 1fr;
     }
-    #footer .partner a:nth-child(1n+3){
+    #footer .partner a:nth-child(1n+3), .blockCard .element:nth-child(3n+1){
         display: none;/*Карусель*/
     }
+    #personName .element:nth-child(2){
+        background-size: cover;
+    }
 }
-@media only screen and (max-width : 414px) {
-    .blockCard .element{
-        min-height: 80vh;
+@media only screen and (max-width : 417px) {
+    .blockCard .element {
+        min-height: auto;
         padding: 3em;
     }
     #case .card{
@@ -82,5 +99,8 @@
     }
     #footer .content{
         grid-template-columns: 1fr 1fr;
+    }
+    .citeInfo{
+        display: none;
     }
 }
