@@ -80,7 +80,6 @@ let slider = document.querySelector('.slider'),
                 isSwipe = true;
             }
         }
-
         if (isSwipe) {
             // запрет ухода влево на первом слайде
             if (slideIndex === 0) {
@@ -89,6 +88,7 @@ let slider = document.querySelector('.slider'),
                     return;
                 } else {
                     allowSwipe = true;
+
                 }
             }
 
@@ -109,6 +109,7 @@ let slider = document.querySelector('.slider'),
             }
 
             // двигаем слайд
+
             sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
         }
 

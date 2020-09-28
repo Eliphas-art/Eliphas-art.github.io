@@ -12,6 +12,7 @@
     --main-color6: rgb(245,245,245);
     --main-color7: rgb(34, 34, 34);
     --main-colorLite: rgba(114, 59, 49,0.95);
+
 }
 /*Global*/
 em,.button{
@@ -50,7 +51,7 @@ p,ul{
     font-size: 1.0625rem;
     margin-bottom: 20px;
     font-weight: 400;
-    color: var(--main-color4);
+    color: var(--main-color6);
 }
 ul li{
     font-weight: 400;
@@ -66,7 +67,8 @@ em{
 }
 i{
     transition-duration: .5s;
-    font-size: 1.5em;
+    font-size: 1.8rem;
+    margin-right: 1.5em;
 }
 i:hover{
     filter: drop-shadow(0 0 .3em)
@@ -107,6 +109,7 @@ i:hover{
     align-content: center;
     min-height: 90vh;
     padding: 1.875em 7.1875em 1.875em 5.625em;
+    text-align: justify;
 }
 .title{
     text-align: center;
@@ -140,6 +143,9 @@ i:hover{
 }
 .content{
     display: grid;
+}
+.slider-arrows{
+    display: none;
 }
 /*Header*/
 #header{
@@ -214,7 +220,9 @@ i:hover{
     filter: blur(60px);
     z-index: 0;
 }
-
+#personName em{
+    color: white;
+}
 #personName .titleCard::after {
     width: 60px;
     background: rgba(var(--main-color3),0.8);
@@ -263,9 +271,6 @@ i:hover{
 #personName .link{
     color: rgb(var(--main-color3));
 }
-#personName i{
-    margin: 0.5em;
-}
 #personName p{
     font-size: 1.05rem;
     line-height: 1.3em;
@@ -298,7 +303,7 @@ i:hover{
     width: 70vw;
     font-size: 1.2rem;
     line-height: 1.6em;
-    color: var(--main-color5);
+    /*color: var(--main-color5);*/
 }
 #about .content li{
     margin-left: 2em;
@@ -320,7 +325,7 @@ i:hover{
 #about .card p{
     text-align: justify;
     margin-top: 25px;
-    color: var(--main-color);
+    /*color: var(--main-color);*/
 }
 /*Biography*/
 #biography .blockCard{
@@ -331,14 +336,14 @@ i:hover{
     background-size: cover;
 }
 #biography .element:nth-child(2){
-    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/alla1.jpg");
+    background: linear-gradient(rgba(34, 34, 34,0.9) 100%, white), url("../res/alla1.jpg");
 
     /*background: var(--main-color7);*/
     background-size: cover;
 }
 #biography .element:nth-child(3){
     grid-gap: 30px;
-    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/alla4.jpg") center;
+    background: linear-gradient(rgba(34, 34, 34,0.9) 100%, white), url("../res/alla4.jpg") center;
     background-size: cover;
 }
 #biography .element:nth-child(4){
@@ -351,7 +356,7 @@ i:hover{
 #biography p{
     margin: 25px;
     display: inline;
-    color: var(--main-color4);
+    /*color: var(--main-color4);*/
     line-height: 28.9px;
 }
 #biography i{
@@ -414,6 +419,7 @@ i:hover{
     color: rgba(var(--main-color3));
 }
 #comment i{
+    margin-right: 0;
     margin-bottom: 30px;
     font-size: 5.625rem;
     display: block;
@@ -660,52 +666,4 @@ display: inline-block;
     to{
         opacity: 1;
     }
-}
-
-.slider {
-    user-select: none;
-    touch-action: pan-y;
-}
-.slider img {
-    poiner-events: none;
-}
-.slider-list {
-    width:  calc(100vw - 6em);
-    overflow: hidden;
-}
-.slider-list.grab {
-    cursor: grab;
-}
-
-.slider-list.grabbing{
-    cursor: grabbing;
-}
-.slider-track {
-    display: flex;
-}
-.slide {
-    width: calc(100vw - 6em);
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-}
-.slider-arrows{
-    text-align: center;
-
-}
-.next,
-.prev {
-
-    background: none;
-    border: none;
-    margin: 0 10px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-.next.disabled,
-.prev.disabled {
-    opacity: .25;
-    pointer-events: none;
 }
