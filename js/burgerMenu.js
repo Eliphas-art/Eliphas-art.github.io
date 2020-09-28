@@ -12,4 +12,3 @@ document.querySelector(".burgerMenu").addEventListener("click", () => {
     else
         ul.style.display = "";
 });
-
