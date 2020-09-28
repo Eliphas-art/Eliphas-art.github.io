@@ -66,7 +66,7 @@ em{
 }
 i{
     transition-duration: .5s;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 i:hover{
     filter: drop-shadow(0 0 .3em)
