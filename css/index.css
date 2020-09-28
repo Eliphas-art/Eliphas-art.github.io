@@ -291,6 +291,7 @@ i:hover{
     grid-gap: 1rem;
 }
 #about .content p ,#about .content ul{
+    text-align: justify;
     text-indent: 2em;
     margin: 0;
     padding: 0;
