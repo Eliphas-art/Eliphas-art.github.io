@@ -327,7 +327,7 @@ i:hover{
     grid-template-rows: 1fr 1fr;
 }
 #biography .element:nth-child(1){
-    background: url("../res/alla2.png");
+    background: url("../res/alla2.jpg");
     background-size: cover;
 }
 #biography .element:nth-child(2){
@@ -338,8 +338,7 @@ i:hover{
 }
 #biography .element:nth-child(3){
     grid-gap: 30px;
-    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/alla4.jpg");
-
+    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/alla4.jpg") center;
     background-size: cover;
 }
 #biography .element:nth-child(4){
@@ -457,7 +456,7 @@ i:hover{
     grid-template-rows: 1fr;
 }
 #connect .element{
-
+    display: block;
     padding-top: 6em;
     padding-bottom: 9em;
     grid-gap: 20px;
