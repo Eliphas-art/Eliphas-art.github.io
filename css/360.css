@@ -4,7 +4,9 @@
     }
     body p, li, #personName p,#personName li, #about .content p, #connect p,#connect input, #connect textarea{
         font-size: 1.25rem;
-
+    }
+    .blockCard .element:nth-child(3n+1){
+        display: none;
     }
     .menu-right .burgerMenu{
         display: block;
