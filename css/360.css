@@ -11,6 +11,7 @@
     .menu-right .burgerMenu{
         display: block;
     }
+
     .menu-right ul{
         display: none;
         grid-template-rows: repeat(8,1fr);
