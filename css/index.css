@@ -708,9 +708,10 @@ display: inline-block;
 .tellPhoneBlock{
     display: none;
     background: white;
+    border-radius: 1em 1em 0;
     padding: 3em 2em;
-    margin-bottom: 1em;
-    color: black;
+    margin: 0 auto 1em;
+    color: var(--main-color);
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 .tellPhoneBlock h2{
@@ -723,7 +724,32 @@ display: inline-block;
     font-weight: 400;
     margin-bottom: .8em;
 }
+.tellPhoneBlock ul > li,.tellPhoneBlock ul a{
+     display: grid;
+     grid-template-columns: auto auto 1fr;
+     justify-items: end;
+     font-weight: 400;
+     margin-bottom: .8em;
+ }
+.tellPhoneBlock li *{
+    color: var(--main-color7);
+}
+.tellPhoneBlock i{
+    color: var(--main-color);
+}
+/*.tellPhoneBlock ul > li *:nth-child(-1n+2),.tellPhoneBlock ul a *{*/
+/*    color: var(--main-color);*/
+/*}*/
+/*li *,.tellPhoneBlock ul a{*/
+/*    color: inherit;*/
+/*}*/
+.tellPhoneBlock ul:nth-child(4) > li{
+    display: block;
+    grid-template-columns: auto auto 1fr;
+    justify-items: end;
+}
 .tellPhoneBlock ul> li:nth-child(1){
+    grid-column: span 3;
     font-weight: 600;
     font-size: 1.3em;
     margin-bottom: 1em;
