@@ -12,3 +12,14 @@ document.querySelector(".burgerMenu").addEventListener("click", () => {
     else
         ul.style.display = "";
 });
+document.querySelector("#tellMy").addEventListener("click", () => {
+    const tellPhoneBlock =  document.querySelector(".tellPhoneBlock");
+    if ( tellPhoneBlock.style.display==="") {
+        tellPhoneBlock.style.display = "block";
+        tellPhoneBlock.addEventListener("click",()=>{
+            tellPhoneBlock.style.display="none"
+        })
+    }
+    else
+        tellPhoneBlock.style.display = "";
+});

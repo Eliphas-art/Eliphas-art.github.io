@@ -367,4 +367,5 @@ textarea {
 }
 a{
     color: inherit;
+    font-weight: inherit;
 }

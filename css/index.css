@@ -147,6 +147,9 @@ i:hover{
 .slider-arrows{
     display: none;
 }
+body .titleCard h2{
+    text-align: start;
+}
 /*Header*/
 #header{
     display: grid;
@@ -658,19 +661,76 @@ display: inline-block;
 .menu-right li:hover::after{
     width: 100%;
  }
-.tellPhone i {
+/*.tellPhone{*/
+/*    background: white;*/
+/*    position: fixed;*/
+/*    bottom: 2em;*/
+/*    right: 2em;*/
+/*}*/
+/*.tellPhone i {*/
+/*    animation: tellPhones;*/
+/*    animation-duration: 3s;*/
+/*    animation-iteration-count:infinite;*/
+/*    animation-direction: alternate-reverse;*/
+/*    position: relative;*/
+/*    margin-left: 20px;*/
+/*    padding: 1em;*/
+/*    font-size: 2rem;*/
+/*    border-radius: 50%;*/
+/*    background: var(--main-color);*/
+/*    color: white;*/
+/*}*/
+/*.tellPhoneBlock{*/
+/* */
+/*}*/
+.tellPhone{
+    position: fixed;
+    z-index: 99;
+    bottom: 2em;
+    right: 2em;
+}
+.tellPhone > i {
+   margin-left: auto;
+    margin-right: 0;
+    display: block;
     animation: tellPhones;
     animation-duration: 3s;
     animation-iteration-count:infinite;
     animation-direction: alternate-reverse;
-    position: fixed;
-    bottom: 2em;
-    right: 2em;
     padding: 1em;
+    height: 1em;
+    width: 1em;
     font-size: 2rem;
     border-radius: 50%;
     background: var(--main-color);
     color: white;
+}
+.tellPhoneBlock{
+    display: none;
+    background: white;
+    padding: 3em 2em;
+    margin-bottom: 1em;
+    color: black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.tellPhoneBlock h2{
+    margin-bottom: 1em;
+}
+.tellPhoneBlock ul{
+    margin: 1.3em 0;
+}
+.tellPhoneBlock ul > li{
+    font-weight: 400;
+    margin-bottom: .8em;
+}
+.tellPhoneBlock ul> li:nth-child(1){
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+}
+
+.tellPhone *{
+    color: black;
 }
 @keyframes tellPhones {
     from {

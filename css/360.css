@@ -16,10 +16,6 @@
         justify-items: center;
         margin: 0;
     }
-    body .titleCard h2{
-        text-align: start;
-    }
-
     .menu-right li{
         font-size: 2em;
         margin: 0;
