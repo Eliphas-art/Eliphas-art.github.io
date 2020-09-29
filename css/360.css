@@ -4,6 +4,7 @@
     }
     body p, li, #personName p,#personName li, #about .content p, #connect p,#connect input, #connect textarea{
         font-size: 1.25rem;
+
     }
     .menu-right .burgerMenu{
         display: block;
@@ -15,6 +16,10 @@
         justify-items: center;
         margin: 0;
     }
+    body .titleCard h2{
+        text-align: start;
+    }
+
     .menu-right li{
         font-size: 2em;
         margin: 0;
@@ -25,10 +30,16 @@
     .blockCard{
         grid-template-rows: 1fr auto;
     }
+    .blockTwo{
+        padding: 60px 7vw;
+    }
     i{
         transition-duration: .5s;
-        font-size: 2.3em;
+        font-size: 1.9rem;
         margin-right: 1.3em;
+    }
+    .link i{
+        font-size: 2.3em;
     }
     #header{
         background: linear-gradient(rgba(0, 0, 0,.8)100%, white), url("https://sud.ua/uploads/old/news/1402494373.jpg") center;
@@ -61,6 +72,9 @@
         background: linear-gradient(rgba(0,0,0,.9) 100%,white), url("../res/alla5.jpg") center;
         background-size: cover;
     }
+    #biography p{
+        margin: 0;
+    }
     #biography .element:nth-child(3){
         background-position:  center;
         background-size: cover;
@@ -73,6 +87,15 @@
     }
     #about .content{
         grid-template-columns: 1fr;
+        width: 80vw;
+    }
+    #about .content li{
+        margin-left: 0;
+        line-height: 2em;
+    }
+    #about .content p{
+        grid-template-columns: 1fr;
+        width: auto;
     }
     #about .content p:nth-child(2){
         display: none;/*Карусель*/
@@ -89,9 +112,18 @@
     #connect .element:nth-child(1) li{
         grid-template-columns: auto auto 1fr 1fr;
     }
+    #footer .content{
+        justify-items: start;
+        grid-gap: 1em;
+        line-height: 25px;
+    }
     #footer .partner a:nth-child(1n+3), .blockCard .element:nth-child(3n+1){
         display: none;/*Карусель*/
     }
+    #footer span{
+        font-size: 1rem;
+    }
+
     .slider {
         user-select: none;
         touch-action: pan-y;
@@ -168,5 +200,14 @@
     }
     .citeInfo{
         display: none;
+    }
+}
+
+@media only screen and (max-width : 370px) {
+   #footer p, #footer li, #footer span{
+       font-size: .95rem;
+   }
+    #footer .content{
+        line-height: 20px;
     }
 }
