@@ -394,7 +394,6 @@ body .titleCard h2{
     justify-items: center;
     background: url("../res/work-bg.jpg");
     background-size: cover;
-
 }
 #case .content{
     grid-template-columns: repeat(3, 1fr);
@@ -402,6 +401,7 @@ body .titleCard h2{
     grid-gap: 20px;
 }
 #case .card{
+    display: block;
     width: 386px;
     overflow: hidden;
 }
@@ -413,7 +413,7 @@ body .titleCard h2{
 #case img{
     height: inherit;
 }
-#case h2,#case h3{
+#case h2, #case h3{
     color: var(--main-color7);
 }
 #case h3{
