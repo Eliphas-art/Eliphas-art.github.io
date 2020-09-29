@@ -128,6 +128,45 @@
                 <button type="button" class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
             </div>
         </div>
+        <div class="sliderDC">
+            <div class="card">
+                <img src="res/insurance5.png" alt="">
+                <div class="text">
+                    <h3>Семейное право</h3>
+                    <ul>
+                        <li>Расторжение брака;</li>
+                        <li>Взыскание алиментов;</li>
+                        <li>Раздел имущества при разводе;</li>
+                        <li>Установление места жительства ребенка;</li>
+                        <li>Лишение родительских прав;</li>
+                        <li>Установление факта отцовства, либо опровержение его и др. </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card ">
+                <img src="res/insurance5.png" alt="">
+                <div class="text">
+                    <h3>Гражданское право</h3>
+                    <ul>
+                        <li>Споры в сфере недвижимости; </li>
+                        <li>Признание права собственности;</li>
+                        <li>Взыскание долга;</li>
+                        <li>Восстановления нарушенных прав;</li>
+                        <li>О признании лица утратившим право пользования жилым помещением и др.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="res/insurance5.png" alt="">
+                <div class="text">
+                    <h3>Наследственное право</h3>
+                    <ul>
+                        <li>Восстановлении срока на принятие наследства;</li>
+                        <li>Установлении факта принятия наследства и др.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="element"></div>
 </div>
@@ -188,12 +227,41 @@
     </div>
     <div class="element"></div>
 </div>
+
 <div id="case" >
     <div class="title">
         <em>Новости</em>
         <h2>Блог</h2>
     </div>
-    <div class="content">
+    <div class="slider">
+        <div class="slider-list">
+            <div class="slider-track connect">
+                <div class="card slide">
+                    <div class="img">
+                        <img src="res/Family1-800x571.jpg" alt="">
+                    </div>
+                    <h3>Family Violence</h3>
+                </div>
+                <div class="card slide">
+                    <div class="img">
+                        <img src="res/Giving-Million-Air-Its-Wings-800x571.jpg" alt="">
+                    </div>
+                    <h3>Giving Million Air Its Wings</h3>
+                </div>
+                <div class="card slide">
+                    <div class="img">
+                        <img src="res/Reinventing-the-Riverfront-800x571.jpg" alt="">
+                    </div>
+                    <h3>Car Accident Insurance</h3>
+                </div>
+            </div>
+        </div>
+        <div class="slider-arrows">
+            <button type="button" class="prev"><i class="fas fa-long-arrow-alt-left"></i></button>
+            <button type="button" class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
+        </div>
+    </div>
+    <div class="content sliderDC">
         <div class="card">
             <div class="img">
                 <img src="res/Family1-800x571.jpg" alt="">
@@ -212,9 +280,9 @@
             </div>
             <h3>Car Accident Insurance</h3>
         </div>
-
     </div>
 </div>
+
 <div id="comment">
     <div class="block">
         <div class="title">
@@ -232,6 +300,7 @@
         </div>
     </div>
 </div>
+
 <div id="connect" class="blockCard">
     <div class="contact element">
         <div class="titleCard">
@@ -275,7 +344,24 @@
     </div>
 </div>
 <footer id="footer" class="blockTwo">
-    <div class="partner">
+    <div class="slider">
+        <div class="slider-list">
+            <div class="slider-track partner">
+                <a class="slide" href="https://court.gov.ua/"><img src="https://static.tildacdn.com/tild6633-6636-4430-b464-343336313637/femida_1.png" alt=""></a>
+                <a class="slide" href="https://unba.org.ua/"><img src="https://unba.org.ua/themes/portal/imgs/logos/1/logo.png" alt=""></a>
+                <a class="slide" href="https://www.rada.gov.ua/"><img src="https://www.rada.gov.ua/img/gerb.svg" alt=""><span>  Верховна Рада України</span></a>
+                <a class="slide" href="https://www.kmu.gov.ua/">
+                    <img src="res/img-coat-of-arms.svg" alt="">
+                    <span>ОФІС ГЕНЕРАЛЬНОГО ПРОКУРОРА</span>
+                </a>
+            </div>
+        </div>
+        <div class="slider-arrows">
+            <button type="button" class="prev"></button>
+            <button type="button" class="next"></button>
+        </div>
+    </div>
+    <div class=" sliderDC partner ">
         <a href="https://court.gov.ua/"><img src="https://static.tildacdn.com/tild6633-6636-4430-b464-343336313637/femida_1.png" alt=""></a>
         <a href="https://unba.org.ua/"><img src="https://unba.org.ua/themes/portal/imgs/logos/1/logo.png" alt=""></a>
         <a href="https://www.rada.gov.ua/"><img src="https://www.rada.gov.ua/img/gerb.svg" alt=""><span>  Верховна Рада України</span></a>
@@ -348,9 +434,10 @@
     <i id="tellMy" class="fas fa-phone"></i>
 </div>
 <div id="root"></div>
-<script src="js/index.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/slider.js"></script>
 <script src="js/burgerMenu.js"></script>
 <script src="js/menuRight.js"></script>
-<script src="js/case.js"></script>
+<!--<script src="js/case.js"></script>-->
 </body>
 </html>

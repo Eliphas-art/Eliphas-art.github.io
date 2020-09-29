@@ -144,6 +144,12 @@ i:hover{
 .content{
     display: grid;
 }
+.slider{
+    display: none;
+}
+.sliderDC{
+    display: grid;
+}
 .slider-arrows{
     display: none;
 }
@@ -560,7 +566,7 @@ footer h1 span{
     padding: .9rem .8rem;
     margin-top: 0;
 }
-footer .partner{
+.partner{
     display: grid;
     align-items: center;
     justify-items: center;

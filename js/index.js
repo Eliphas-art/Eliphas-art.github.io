@@ -1,4 +1,4 @@
-let slider = document.querySelector('.slider'),
+function slll(slider){
     sliderList = slider.querySelector('.slider-list'),
     sliderTrack = slider.querySelector('.slider-track'),
     slides = slider.querySelectorAll('.slide'),
@@ -70,7 +70,6 @@ let slider = document.querySelector('.slider'),
         posY2 = posY1 - evt.clientY;
         posY1 = evt.clientY;
 
-        // определение действия свайп или скролл
         if (!isSwipe && !isScroll) {
             let posY = Math.abs(posY2);
             if (posY > 7 || posX2 === 0) {
@@ -80,15 +79,14 @@ let slider = document.querySelector('.slider'),
                 isSwipe = true;
             }
         }
+
         if (isSwipe) {
-            // запрет ухода влево на первом слайде
             if (slideIndex === 0) {
                 if (posInit < posX1) {
                     setTransform(transform, 0);
                     return;
                 } else {
                     allowSwipe = true;
-
                 }
             }
 
@@ -102,13 +100,10 @@ let slider = document.querySelector('.slider'),
                 }
             }
 
-            // запрет протаскивания дальше одного слайда
             if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
                 reachEdge();
                 return;
             }
-
-            // двигаем слайд
 
             sliderTrack.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
         }
@@ -183,3 +178,8 @@ arrows.addEventListener('click', function() {
 
     slide();
 });
+}
+const slidersList = document.querySelectorAll(".slider");
+for (let i = 0;i<slidersList.length; i++) {
+    slll(slidersList[i]);
+}

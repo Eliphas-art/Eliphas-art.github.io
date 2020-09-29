@@ -113,14 +113,15 @@
         grid-gap: 1em;
         line-height: 25px;
     }
-    #footer .partner a:nth-child(1n+3), .blockCard .element:nth-child(3n+1){
-        display: none;/*Карусель*/
-    }
+
     #footer span{
         font-size: 1rem;
     }
-
+    .sliderDC{
+        display: none;
+    }
     .slider {
+        display: block;
         user-select: none;
         touch-action: pan-y;
     }
@@ -188,8 +189,16 @@
     #connect .element{
         padding: 3em;
     }
-    #footer .partner a:nth-child(1n+2){
-        display: none;/*Карусель*/
+    #footer .partner a{
+        text-align: center;
+        display: block;
+        position: relative;
+    }
+    #footer .partner .slider-arrows{
+        display: none;
+    }
+    #footer .slider{
+        color: rgba(255,255,255,.9);
     }
     #footer .content{
         grid-template-columns: 1fr 1fr;
