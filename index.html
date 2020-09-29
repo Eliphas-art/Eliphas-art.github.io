@@ -290,13 +290,22 @@
             <h2>Что говорят наши клиенты</h2>
         </div>
         <i class="fas fa-quote-left"></i>
-        <p>Я обратился к адвокату за помощью. Нами была определена позиция. Адвокат возобновил сроки на обжалование, подал апелляционную жалобу. В ходе выступления в суде адвоката решение суда первой инстанции было изменено и принято новое решение в мою пользу. Работой адвоката доволен.</p>
-        <div class="contact">
-            <!--            <img src="res/Emma1-150x150.jpg" alt="">-->
-            <div class="text">
-                <h3>Федоренко Игорь Владимирович</h3>
-                <em>Гражданское правоо</em>
+        <div class="slider">
+            <div class="slider-list">
+                <div class="slider-track"></div>
             </div>
+            <div class="slider-arrows">
+                <button type="button" class="prev">&larr;</button>
+                <button type="button" class="next">&rarr;</button>
+            </div>
+            <div class="button">Добавить коментарий</div>
+            <form style="display: block" onsubmit="addComment(); return false" class="commentForm">
+                <input id="nameComment" style="margin:auto; display: block" type="text">
+                <input id="textComment" style="margin:auto; display: block" type="text">
+                <input id="practiceComment" style="margin:auto; display: block" type="text">
+                <input name="button" style="margin:auto; display: block" type="button" value="Отправить" onclick="addComment()">
+
+            </form>
         </div>
     </div>
 </div>
@@ -435,7 +444,9 @@
 </div>
 <div id="root"></div>
 <!--<script src="js/index.js"></script>-->
+<script src="js/comment.js"></script>
 <script src="js/slider.js"></script>
+
 <script src="js/burgerMenu.js"></script>
 <script src="js/menuRight.js"></script>
 <!--<script src="js/case.js"></script>-->

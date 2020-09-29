@@ -14,4 +14,3 @@ setInterval(() => {
 
     }
 },100);
-console.log(window.innerWidth);
