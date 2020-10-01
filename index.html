@@ -295,17 +295,25 @@
                 <div class="slider-track"></div>
             </div>
             <div class="slider-arrows">
-                <button type="button" class="prev">&larr;</button>
-                <button type="button" class="next">&rarr;</button>
+                <button type="button" class="prev"><i class="fas fa-long-arrow-alt-left"></i></button>
+                <button type="button" class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
             </div>
             <div class="button">Добавить коментарий</div>
-            <form style="display: block" onsubmit="addComment(); return false" class="commentForm">
-                <input id="nameComment" style="margin:auto; display: block" type="text">
-                <input id="textComment" style="margin:auto; display: block" type="text">
-                <input id="practiceComment" style="margin:auto; display: block" type="text">
-                <input name="button" style="margin:auto; display: block" type="button" value="Отправить" onclick="addComment()">
+            <div class="commentModal">
+                <div class="overlay"></div>
+                <form onsubmit="addComment(); return false" class="commentForm">
+                    <h4>Введите коментарий</h4>
+                    <label for="nameComment">Имя</label>
+                    <input id="nameComment" placeholder="Введите своё имя"  type="text">
+                    <label for="textComment">Коментарий</label>
+    <!--                <input id="textComment" placeholder="Введите коментарий"  type="text">-->
+                    <textarea name="" id="textComment" placeholder="Введите коментарий ..." cols="30" rows="4"></textarea>
+                    <label for="practiceComment">Категория</label>
+                    <input id="practiceComment" placeholder="Выберите категорию "  type="text">
+                    <input name="button" type="button" value="Отправить" onclick="addComment()">
 
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -343,6 +351,7 @@
         </div>
         <p>Закон - дело сложное. Это может вызвать у вас большие проблемы. Позвольте нам помочь вам!</p>
         <form action="" onsubmit="return false">
+
             <input type="text" placeholder="Имя">
             <input type="text" placeholder="Телефон">
             <!--            <input type="text" placeholder="Компания">-->

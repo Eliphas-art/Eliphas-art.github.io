@@ -1,5 +1,4 @@
-
-function slll(sliders) {
+function slll(sliders, bull) {
     let slider = sliders,
         sliderList = slider.querySelector('.slider-list'),
         sliderTrack = slider.querySelector('.slider-track'),
@@ -51,10 +50,10 @@ function slll(sliders) {
 
                 sliderTrack.style.transition = '';
 
-                document.addEventListener('touchmove', swipeAction);
-                document.addEventListener('mousemove', swipeAction);
-                document.addEventListener('touchend', swipeEnd);
-                document.addEventListener('mouseup', swipeEnd);
+                slider.addEventListener('touchmove', swipeAction);
+                slider.addEventListener('mousemove', swipeAction);
+                slider.addEventListener('touchend', swipeEnd);
+                slider.addEventListener('mouseup', swipeEnd);
 
                 sliderList.classList.remove('grab');
                 sliderList.classList.add('grabbing');
@@ -117,10 +116,10 @@ function slll(sliders) {
             isScroll = false;
             isSwipe = false;
 
-            document.removeEventListener('touchmove', swipeAction);
-            document.removeEventListener('mousemove', swipeAction);
-            document.removeEventListener('touchend', swipeEnd);
-            document.removeEventListener('mouseup', swipeEnd);
+            slider.removeEventListener('touchmove', swipeAction);
+            slider.removeEventListener('mousemove', swipeAction);
+            slider.removeEventListener('touchend', swipeEnd);
+            slider.removeEventListener('mouseup', swipeEnd);
 
             sliderList.classList.add('grab');
             sliderList.classList.remove('grabbing');
@@ -177,12 +176,15 @@ function slll(sliders) {
         } else {
             return;
         }
-
         slide();
     });
 }
 
-const slidersList = document.querySelectorAll(".slider");
-for (let i = 0;i<slidersList.length; i++) {
-    slll(slidersList[i]);
+function sliderBar() {
+    const slidersList = document.querySelectorAll(".slider");
+    for (let i = 0; i < slidersList.length; i++) {
+        slll(slidersList[i]);
+    }
 }
+
+sliderBar();
