@@ -60,7 +60,8 @@ function slll(sliders, bull) {
             }
         },
         swipeAction = function() {
-
+            clearInterval(interval);
+            clearTimeout(setTime);
             let evt = getEvent(),
                 style = sliderTrack.style.transform,
                 transform = +style.match(trfRegExp)[0];
@@ -84,7 +85,10 @@ function slll(sliders, bull) {
             if (isSwipe) {
                 if (slideIndex === 0) {
                     if (posInit < posX1) {
-                        setTransform(transform, 0);
+                        slideIndex = slides.length-1;
+                        // setTransform(transform, 0);
+                        reachEdge();
+                        // slide();
                         return;
                     } else {
                         allowSwipe = true;
@@ -94,8 +98,9 @@ function slll(sliders, bull) {
                 // запрет ухода вправо на последнем слайде
                 if (slideIndex === --slides.length) {
                     if (posInit > posX1) {
-                        setTransform(transform, lastTrf);
-                        return;
+                        slideIndex = 0;
+                        reachEdge();
+
                     } else {
                         allowSwipe = true;
                     }
@@ -111,6 +116,11 @@ function slll(sliders, bull) {
 
         },
         swipeEnd = function() {
+            setTime= setTimeout(()=>{
+                interval= setInterval(()=>{
+                    intervalFunc()
+                },8000)
+            },2000);
             posFinal = posInit - posX1;
 
             isScroll = false;
@@ -176,7 +186,6 @@ function slll(sliders, bull) {
         clearTimeout(setTime);
         let target = e.target;
         if (target.classList.contains('fa-long-arrow-alt-right')) {
-
             slideIndex++;
         } else if (target.classList.contains('fa-long-arrow-alt-left')) {
             slideIndex--;
@@ -191,35 +200,19 @@ function slll(sliders, bull) {
         slide();
     });
     function intervalFunc() {
-        slideIndex++;
+        if (slideIndex >= slides.length-1)
+            slideIndex = 0;
+         else
+            slideIndex++;
         slide();
     }
-
-    // arrows.children[0].addEventListener('click', function(e) {
-    //     console.log(e.target);
-    //     console.log(e.currentTarget);
-    //     console.log(arrows.children[0].classList.contains('next'));
-    //     if (arrows.children[0].classList.contains('prev')) {
-    //         slideIndex--;
-    //     } else {
-    //         return;
-    //     }
-    //     slide();
-    // });
-    // arrows.children[1].addEventListener('click', function(e) {
-    //     if (arrows.children[1].classList.contains('next')) {
-    //         slideIndex++;
-    //     } else {
-    //         return;
-    //     }
-    //     slide();
-    // })
 }
 
 function sliderBar() {
     const slidersList = document.querySelectorAll(".slider");
     for (let i = 0; i < slidersList.length; i++) {
         slll(slidersList[i], i);
+
     }
 }
 
