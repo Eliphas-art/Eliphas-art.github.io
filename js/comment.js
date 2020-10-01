@@ -25,7 +25,6 @@ function comment() {
         cardList[element.ids].h3 = cloneTag(h3, cardList[element.ids].card, element.name);
         cardList[element.ids].em = cloneTag(em, cardList[element.ids].card, element.practice);
     });
-    console.log(cardList);
 
 }
 function cloneTag(tag,from,inner) {
