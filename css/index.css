@@ -184,6 +184,13 @@ i:hover{
     margin-top: 15px;
     text-align: center;
 }
+.slider-arrows i{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
 .next,
 .prev {
     background: none;

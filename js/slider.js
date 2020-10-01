@@ -165,25 +165,61 @@ function slll(sliders, bull) {
     sliderTrack.addEventListener('transitionend', () => allowSwipe = true);
     slider.addEventListener('touchstart', swipeStart);
     slider.addEventListener('mousedown', swipeStart);
+    let interval,setTime;
 
-    arrows.addEventListener('click', function() {
-        let target = event.target;
+    interval = setInterval(() => {
+        intervalFunc()
+    }, 8000);
 
-        if (target.classList.contains('next')) {
+    arrows.addEventListener('click', function(e) {
+        clearInterval(interval);
+        clearTimeout(setTime);
+        let target = e.target;
+        if (target.classList.contains('fa-long-arrow-alt-right')) {
+
             slideIndex++;
-        } else if (target.classList.contains('prev')) {
+        } else if (target.classList.contains('fa-long-arrow-alt-left')) {
             slideIndex--;
         } else {
             return;
         }
+        setTime= setTimeout(()=>{
+            interval= setInterval(()=>{
+                intervalFunc()
+            },8000)
+        },2000);
         slide();
     });
+    function intervalFunc() {
+        slideIndex++;
+        slide();
+    }
+
+    // arrows.children[0].addEventListener('click', function(e) {
+    //     console.log(e.target);
+    //     console.log(e.currentTarget);
+    //     console.log(arrows.children[0].classList.contains('next'));
+    //     if (arrows.children[0].classList.contains('prev')) {
+    //         slideIndex--;
+    //     } else {
+    //         return;
+    //     }
+    //     slide();
+    // });
+    // arrows.children[1].addEventListener('click', function(e) {
+    //     if (arrows.children[1].classList.contains('next')) {
+    //         slideIndex++;
+    //     } else {
+    //         return;
+    //     }
+    //     slide();
+    // })
 }
 
 function sliderBar() {
     const slidersList = document.querySelectorAll(".slider");
     for (let i = 0; i < slidersList.length; i++) {
-        slll(slidersList[i]);
+        slll(slidersList[i], i);
     }
 }
 
