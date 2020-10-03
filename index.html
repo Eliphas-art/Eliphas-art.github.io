@@ -299,6 +299,7 @@
                 <button type="button" class="next"><i class="fas fa-long-arrow-alt-right"></i></button>
             </div>
             <div class="button">Добавить коментарий</div>
+            <div class="button" onclick="resetStore()">Очистить кеш</div>
             <div class="commentModal">
                 <div class="overlay"></div>
                 <form onsubmit="addComment(); return false" class="commentForm ">
@@ -355,7 +356,6 @@
         </div>
         <p>Закон - дело сложное. Это может вызвать у вас большие проблемы. Позвольте нам помочь вам!</p>
         <form action="" onsubmit="return false">
-
             <input type="text" placeholder="Имя">
             <input type="text" placeholder="Телефон">
             <!--            <input type="text" placeholder="Компания">-->
