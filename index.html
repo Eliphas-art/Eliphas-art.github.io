@@ -303,9 +303,13 @@
                 <div class="overlay"></div>
                 <form onsubmit="addComment(); return false" class="commentForm ">
                     <h4>Введите коментарий</h4>
+                    <div class="commentModalError">
+                        <label for="textComment">Вы ввели слишком короткий кометарий</label>
+                    </div>
+
                     <label for="nameComment">Имя</label>
                     <input id="nameComment" placeholder="Введите своё имя"  type="text">
-                    <label for="textComment" class="commentModalError"> Коментарий</label>
+                    <label for="textComment"> Коментарий</label>
     <!--                <input id="textComment" placeholder="Введите коментарий"  type="text">-->
                     <textarea name="" id="textComment" placeholder="Введите коментарий ..." cols="30" rows="4"></textarea>
                     <label for="practiceComment">Категория</label>

@@ -563,9 +563,26 @@ body .titleCard h2{
     background-color: rgba(0,0,0,0.5);
     z-index: 99;
 }
-.commentModalError textarea::placeholder {
-    color: tomato;
+.commentModalError{
+    display: none;
 }
+#comment .commentModalError label{
+    display: block;
+    font-size: 1.4rem;
+    color: tomato;
+    opacity: .9;
+}
+#comment .commentModalError label:after {
+    content: "";
+
+    display: block;
+    margin: 1em 0 1.3em;
+    height: 1px;
+    width: 100%;
+    background: red;
+    opacity: .4;
+}
+
 .commentModal .overlay {
     position: fixed;
     left: 0; right: 0; top: 0; bottom: 0;

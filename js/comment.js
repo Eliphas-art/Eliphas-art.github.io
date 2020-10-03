@@ -69,19 +69,21 @@ function addComment() {
     const textComment = commentBlockForm.querySelector("#textComment");
     const practiceComment = commentBlockForm.querySelector("#practiceComment").value;
     const label = commentBlockForm.querySelectorAll("label");
+    const commentModalError = document.querySelector(".commentModalError");
 
     label[1].style.color="black";
     commentBlockForm.classList.remove("commentModalError");
     textComment.style.border="1px solid black";
-
     if (textComment.value.length<20){
         commentInterval =setInterval(()=>{
             if(textComment.value.length>=20){
+                commentModalError.style.display = "block";
                 label[1].style.color="black";
                 textComment.style.border="1px solid black";
                 textComment.style.color="black";
             }
             else {
+                commentModalError.style.display = "block";
                 label[1].style.color="tomato";
                 // commentBlockForm.classList.add("commentModalError");
                 textComment.style.border="1px solid tomato";
