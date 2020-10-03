@@ -149,8 +149,13 @@ i:hover{
 }
 .slider{
     display: none;
+    width: 100%;
+    text-align: center;
     user-select: none;
     touch-action: pan-y;
+}
+.slider >*{
+    margin: auto;
 }
 .sliderDC{
     display: grid;
@@ -180,11 +185,13 @@ i:hover{
     justify-content: center;
 }
 .slider-arrows {
-    display: none;
+    /*display: none;*/
+
     margin-top: 15px;
-    text-align: center;
+    /*text-align: center;*/
 }
 .slider-arrows i{
+    color: white;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -193,6 +200,7 @@ i:hover{
 
 .next,
 .prev {
+
     background: none;
     border: none;
     margin: 0 10px;
@@ -503,6 +511,9 @@ body .titleCard h2{
     display: block;
     color: var(--main-color);
 }
+#comment .slider i{
+    font-size: 2em;
+}
 #comment em{
     letter-spacing: 0;
     font-weight: 400;
@@ -551,6 +562,9 @@ body .titleCard h2{
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     z-index: 99;
+}
+.commentModalError textarea::placeholder {
+    color: tomato;
 }
 .commentModal .overlay {
     position: fixed;
@@ -612,6 +626,7 @@ body .titleCard h2{
     color: var(--main-color);
     margin-right: 20px;
 }
+
 #connect input{
     border: none;
     padding: 1em .8em;

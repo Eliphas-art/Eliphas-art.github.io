@@ -20,6 +20,7 @@ function slll(sliders, bull) {
         transition = true,
         nextTrf = 0,
         prevTrf = 0,
+        isInterval = true,
         lastTrf = --slides.length * slideWidth,
         posThreshold = slides[0].offsetWidth * 0.35,
         trfRegExp = /([-0-9.]+(?=px))/,
@@ -31,9 +32,6 @@ function slll(sliders, bull) {
                 sliderTrack.style.transition = 'transform .5s';
             }
             sliderTrack.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
-
-            prev.classList.toggle('disabled', slideIndex === 0);
-            next.classList.toggle('disabled', slideIndex === --slides.length);
         },
         swipeStart = function() {
             let evt = getEvent();
@@ -60,8 +58,11 @@ function slll(sliders, bull) {
             }
         },
         swipeAction = function() {
-            clearInterval(interval);
-            clearTimeout(setTime);
+            if(isInterval) {
+                clearInterval(interval);
+                clearTimeout(setTime);
+                isInterval = false
+            }
             let evt = getEvent(),
                 style = sliderTrack.style.transform,
                 transform = +style.match(trfRegExp)[0];
@@ -94,7 +95,6 @@ function slll(sliders, bull) {
                         allowSwipe = true;
                     }
                 }
-
                 // запрет ухода вправо на последнем слайде
                 if (slideIndex === --slides.length) {
                     if (posInit > posX1) {
@@ -116,11 +116,15 @@ function slll(sliders, bull) {
 
         },
         swipeEnd = function() {
-            setTime= setTimeout(()=>{
-                interval= setInterval(()=>{
-                    intervalFunc()
-                },8000)
-            },2000);
+            if(!isInterval) {
+                setTime= setTimeout(()=>{
+                    interval= setInterval(()=>{
+                        intervalFunc()
+                    },8000)
+                },2000);
+                isInterval = true
+            }
+
             posFinal = posInit - posX1;
 
             isScroll = false;
@@ -186,9 +190,9 @@ function slll(sliders, bull) {
         clearTimeout(setTime);
         let target = e.target;
         if (target.classList.contains('fa-long-arrow-alt-right')) {
-            slideIndex++;
+            slideIndex === slides.length-1 ? slideIndex = 0 : slideIndex++;
         } else if (target.classList.contains('fa-long-arrow-alt-left')) {
-            slideIndex--;
+            slideIndex === 0 ? slideIndex = slides.length-1 : slideIndex--;
         } else {
             return;
         }
@@ -202,7 +206,7 @@ function slll(sliders, bull) {
     function intervalFunc() {
         if (slideIndex >= slides.length-1)
             slideIndex = 0;
-         else
+        else
             slideIndex++;
         slide();
     }
@@ -212,7 +216,6 @@ function sliderBar() {
     const slidersList = document.querySelectorAll(".slider");
     for (let i = 0; i < slidersList.length; i++) {
         slll(slidersList[i], i);
-
     }
 }
 

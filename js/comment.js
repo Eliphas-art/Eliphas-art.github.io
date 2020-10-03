@@ -1,4 +1,5 @@
 const cardList = [];
+let commentInterval;
 function comment() {
     const commentBlock = document.querySelector("#comment");
     const sliderTrack = commentBlock.querySelector(".slider-track");
@@ -63,30 +64,50 @@ function active(tag,classNames,boolean) {
 
 comment();
 function addComment() {
-    const nameComment = document.querySelector("#nameComment").value;
-    const textComment = document.querySelector("#textComment").value;
-    const practiceComment = document.querySelector("#practiceComment").value;
-    const stirs = JSON.parse(localStorage.getItem("Comment"));
-    const storeObj = {
-        ids: stirs.length,
-        comment: textComment,
-        name: nameComment,
-        practice: practiceComment
-    };
-    stirs.push(storeObj);
-    localStorage.setItem("Comment", JSON.stringify(stirs));
-    location.reload();
-    modalMenu("commentModal")
+    const commentBlockForm = document.querySelector(".commentForm");
+    const nameComment = commentBlockForm.querySelector("#nameComment").value;
+    const textComment = commentBlockForm.querySelector("#textComment");
+    const practiceComment = commentBlockForm.querySelector("#practiceComment").value;
+    const label = commentBlockForm.querySelectorAll("label");
+
+    label[1].style.color="black";
+    commentBlockForm.classList.remove("commentModalError");
+    textComment.style.border="1px solid black";
+
+    if (textComment.value.length<20){
+        commentInterval =setInterval(()=>{
+            if(textComment.value.length>=20){
+                label[1].style.color="black";
+                textComment.style.border="1px solid black";
+                textComment.style.color="black";
+            }
+            else {
+                label[1].style.color="tomato";
+                // commentBlockForm.classList.add("commentModalError");
+                textComment.style.border="1px solid tomato";
+                textComment.style.color="tomato";
+            }
+        })
+
+    }else {
+        const stirs = JSON.parse(localStorage.getItem("Comment"));
+        const storeObj = {
+            ids: stirs.length,
+            comment: textComment.value,
+            name: nameComment,
+            practice: practiceComment
+        };
+        stirs.push(storeObj);
+        localStorage.setItem("Comment", JSON.stringify(stirs));
+        location.reload();
+        modalMenu("commentModal")
+    }
 }
 document.querySelector("#comment").querySelector(".button").addEventListener("click", () => {
-    modalMenu("commentModal")
+    modalMenu("commentModal");
+
+    document.querySelector(`.${"commentModal"}`).querySelector(".overlay").addEventListener("click",()=>{
+    document.querySelector(`.${"commentModal"}`).style.display = "";
+    })
 });
 
-function modalMenu(blocks) {
-    blocks =  document.querySelector(`.${blocks}`);
-    if ( blocks.style.display==="") {
-        blocks.style.display = "block";
-    }
-    else
-        blocks.style.display = "";
-}

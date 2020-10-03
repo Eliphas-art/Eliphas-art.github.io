@@ -301,11 +301,11 @@
             <div class="button">Добавить коментарий</div>
             <div class="commentModal">
                 <div class="overlay"></div>
-                <form onsubmit="addComment(); return false" class="commentForm">
+                <form onsubmit="addComment(); return false" class="commentForm ">
                     <h4>Введите коментарий</h4>
                     <label for="nameComment">Имя</label>
                     <input id="nameComment" placeholder="Введите своё имя"  type="text">
-                    <label for="textComment">Коментарий</label>
+                    <label for="textComment" class="commentModalError"> Коментарий</label>
     <!--                <input id="textComment" placeholder="Введите коментарий"  type="text">-->
                     <textarea name="" id="textComment" placeholder="Введите коментарий ..." cols="30" rows="4"></textarea>
                     <label for="practiceComment">Категория</label>
@@ -361,7 +361,6 @@
         </form>
     </div>
 </div>
-<div id="batut">adsfasdfasdgasdfg</div>
 <footer id="footer" class="blockTwo">
     <div class="slider">
         <div class="slider-list">
@@ -458,7 +457,6 @@
 <script src="js/index.js"></script>
 <script src="js/comment.js"></script>
 <script src="js/slider.js"></script>
-
 <script src="js/burgerMenu.js"></script>
 <script src="js/menuRight.js"></script>
 <!--<script src="js/case.js"></script>-->

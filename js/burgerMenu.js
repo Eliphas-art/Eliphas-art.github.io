@@ -13,13 +13,17 @@ document.querySelector(".burgerMenu").addEventListener("click", () => {
         ul.style.display = "";
 });
 document.querySelector("#tellMy").addEventListener("click", () => {
-    const tellPhoneBlock =  document.querySelector(".tellPhoneBlock");
-    if ( tellPhoneBlock.style.display==="") {
-        tellPhoneBlock.style.display = "block";
-        tellPhoneBlock.addEventListener("click",()=>{
-            tellPhoneBlock.style.display="none"
-        })
-    }
-    else
-        tellPhoneBlock.style.display = "";
+    // onClickClose(document.querySelector(".tellPhoneBlock"));
+    modalMenu("tellPhoneBlock");
+    onClickClose(document.querySelector(".tellPhoneBlock"));
+    // const tellPhoneBlock =  document.querySelector(".tellPhoneBlock");
+    // if ( tellPhoneBlock.style.display==="") {
+    //     tellPhoneBlock.style.display = "block";
+    //     tellPhoneBlock.addEventListener("click",()=>{
+    //         tellPhoneBlock.style.display="none"
+    //     })
+    // }
+    // else
+    //     tellPhoneBlock.style.display = "";
+    // onClickClose(document.querySelector("#tellMy"))
 });
