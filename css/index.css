@@ -644,17 +644,17 @@ body .titleCard h2{
     margin-right: 20px;
 }
 
-#connect input{
+#connect input, #connect button{
     border: none;
     padding: 1em .8em;
 }
 #connect .email{
     width: 50%;
 }
-#connect .contact input[type="button"]{
-    margin-left: -4px;
-}
-#connect input[type="button"]{
+/*#connect .contact input[type="button"]{*/
+/*    margin-left: -4px;*/
+/*}*/
+#connect button{
     letter-spacing: 2px;
     font-weight: 800;
     text-transform: uppercase;
@@ -671,14 +671,21 @@ body .titleCard h2{
      line-height: 27px;
      color: var(--main-color2);
  }
+#connect form p {
+    display: none;
+    grid-column: span 2;
+}
 #connect h2{
     color: var(--main-color7);
 }
-
 #connect .contact{
     background: var(--main-color6);
 }
+.contact-form__input-wrapper{
+    display: grid;
+}
 #connect textarea{
+
     border: none;
     height: 119px;
     padding: 18px 22px;
@@ -689,12 +696,14 @@ body .titleCard h2{
     grid-template-columns: 1fr 1fr;
     grid-gap: 14px;
 }
-#connect .consultation input[type="text"], #connect textarea{
+#connect .consultation input[type="text"], #connect .consultation input[type="tel"], #connect textarea{
     background: var(--main-color6);
 }
-#connect .consultation textarea,#connect .consultation input[type="button"]{
+#connect .consultation .textarea, #connect .consultation textarea, #connect .consultation button{
     grid-column: span 2;
+
 }
+
 /*Footer*/
 footer{
     background: var(--main-color7);
