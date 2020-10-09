@@ -363,11 +363,25 @@ body .titleCard h2{
 }
 /*About*/
 #about{
+    position: relative;
     padding: 2.2em;
-    background: url("../res/layer-bg1.jpg");
+
+    /*filter: contrast(150%) ;*/
+
+}
+#about .bkg{
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/layer-bg1.jpg");
+    filter: blur(2px);
     background-size: cover;
 
-}#about .block{
+}
+#about .block{
      padding: 6.125em 0;
  }
 #about h2{
