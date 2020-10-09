@@ -376,7 +376,7 @@ body .titleCard h2{
     right: -5px;
     bottom: -5px;
     z-index: -1;
-    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/layer-bg1.jpg");
+    background: linear-gradient(rgba(34, 34, 34,0.8) 100%, white), url("../res/layer-bg1.JPG");
     filter: blur(2px);
     background-size: cover;
 
